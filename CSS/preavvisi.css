@@ -1,0 +1,161 @@
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+html, body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    height: 100%;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    top: 3rem;
+    text-align: center;
+    margin: 0 auto;
+        
+    
+    }
+
+     table, tr, td, th{
+    
+        border: 1px solid black;
+        font-size: 12px;
+        text-transform: uppercase;
+        border-collapse: collapse;
+        padding: 2px 2px;
+     
+   
+       
+    }
+    
+
+    
+
+.Filtra{
+
+    position: relative;
+    top: 6.3rem;
+    text-align: left;
+    width: calc(100%-5px);
+ 
+    background-color: blueviolet;
+    top: 4rem;
+
+    padding: 5px;
+    margin: 0 auto;
+}
+
+table { 
+  position: relative;
+
+    width:100%;
+       
+       top: 4rem;
+
+       
+  
+      }
+
+      #tottd, .tottd{
+font-size: 18px;
+font-weight: bold;
+
+      }
+
+
+    .fa-folder{
+        cursor: pointer;
+      }
+
+
+
+
+
+.sfondo-modale{
+position: absolute;
+top: 0;
+width: 100vw;
+height: 100vh;
+  background-color: rgba(61, 61, 61, 0.452);
+  display: none;
+}
+ 
+.modale-det{
+  position: relative;
+  top: 10rem;
+  left: 2rem;
+  box-shadow: 6px 6px rgba(99, 99, 99, 0.582);
+  overflow: auto;
+  display: none;
+  width: 70%;
+  height: 70vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  margin: 0 auto; 
+  border: 1px solid black;
+}
+  
+.table-modale thead{
+ 
+position: absolute;
+top: 2rem;
+ max-width: 90%;
+  border-collapse: collapse;
+  padding: 7px;
+}
+.cont-modale{
+  position: relative;
+  top: 2rem;
+  text-align: center;
+  max-width: 100%;
+}
+
+#btn-modale{
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  background: none;
+  border: none;
+}
+
+#btn-modale:hover{
+color: red;
+font-weight: bold;
+font-size: 20px;
+}
+
+span {
+  position: absolute;
+left: 25rem;
+font-size: 30px;
+font-weight: bold;
+  top: 15px;
+}
+ span.rep{
+  position: absolute;
+  top: 0.3rem;
+ 
+left: 35rem;
+  
+}
+
+tr:hover {
+background-color: rgb(233, 255, 37);
+}
+ 
+
+ 
+
+
+   
+    
+
+
+    
+

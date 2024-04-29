@@ -1,0 +1,45 @@
+
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+
+
+html{
+  margin: 0px;
+  padding: 0px;
+}
+
+
+th, td{
+
+    border: 1px solid #0a0a0a;
+   
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+
+}
+
+table {
+    font-family: 'Roboto';
+ position: absolute;
+top: 12rem;
+left: 2rem;
+    font-size: 11px;
+   text-transform: uppercase;
+padding: 4px;
+}
+
+.Filtra{
+  position: absolute;
+  top: 120px;
+  background-color: blueviolet;
+}
+
+.box-registro{
+  left: 10px;
+}
+

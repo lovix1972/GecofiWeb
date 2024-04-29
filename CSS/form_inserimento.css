@@ -1,0 +1,242 @@
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+body html{
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'Roboto' sans-serif;
+  background-color: beige;
+}
+
+
+
+.container{
+  position: absolute;
+  top: 9rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+ #box1{
+position: relative;
+top: -1.2rem;
+background-color: rgb(243, 243, 243); 
+width: 100%;
+height: 45rem;
+border: 1px solid;
+padding: 10px;
+margin: 10px;
+border-radius: 10px;
+
+
+}
+
+#db{
+
+  position: absolute;
+  top: -25rem;
+  left: 31rem;
+  width:44rem;
+  height: 27rem;
+
+margin: 10px ; 
+padding: 10px;
+border: 1px solid rgb(75, 74, 74);
+border-radius: 4px;
+  
+  }
+  
+  .table-db{
+    width: 10 rem;
+  font-size: 10px;
+  height: 20px;
+  }
+
+#box1 h1{
+  color: blue;
+  padding: 10px;
+  margin-left: 10px;
+  text-shadow:   2px  2px 4px #777;
+            
+}
+
+label{
+  font-size: 12px;
+  font-weight: bold;
+}
+#principali{
+  position: absolute;
+  top: 5rem;
+width:35rem;
+height:28rem;
+display: flex;
+flex-direction: column;
+padding: 10px;
+margin: 10px;
+border: 1px solid rgb(75, 74, 74);
+border-radius: 4px;
+}
+
+#secondari{
+  position: relative;
+  top: -1.2rem;
+
+  left:40rem;
+  width:34rem;
+  height: 20rem;
+display: flex;
+flex-direction: column;
+margin: 10px ; 
+padding: 10px;
+border: 1px solid rgb(75, 74, 74);
+border-radius: 4px;
+  }
+div.valutadx>input{
+
+    text-align: right;
+    font-weight: bold;
+width: 30%;
+  }
+
+#n_pds, #anno{
+  position: relative;
+  width: 50px;
+
+}
+ 
+
+select#capitolo{
+  position: relative;
+  width: 25%;
+}
+input#id_Reparto{
+  width: 10%;
+}
+
+#oggetto{
+  position: relative;
+width:99%;
+}
+.button{
+  position: absolute;
+  width: 33rem;
+left: 0rem;
+  top: 23rem;
+  border-radius: 4px;
+  padding: 17px;
+border: 1px solid rgb(75, 74, 74);
+margin: 0 auto;
+}
+#opzioni{
+  position: relative;
+  top: 6.5rem;
+  left: 25rem;
+
+}
+      
+.active a {
+  color: red
+}
+
+.elenco-registro{
+position: absolute;
+top: 5.9rem;
+left: 80rem;
+ 
+  color: black;
+ 
+  width: 30%;
+  height: 62.4%;
+  border: 1px solid black;
+  
+overflow: auto;
+border-radius: 4px;
+display: flex;
+}
+
+
+
+ table{
+    position: absolute;
+    top: 3.5rem;
+    width: 100%;
+    border-collapse: collapse;
+    padding: 4px;
+    margin: 0 auto;
+}
+
+
+.elenco-registro table, th, td{
+
+border: 1px solid black;
+font-size: 10px;
+
+}
+
+ div section{
+ position: fixed;
+ background-color: rgb(122, 122, 122);
+ width: 30%;
+ color: bisque;
+ z-index: 4;
+}
+
+#note{
+position: relative;
+top: 7rem;
+left:.6rem;
+  width: 35rem;
+  
+  height: 80px;
+  border: 1px solid black;
+  padding:10px ;
+  font-size: 12px;
+  text-align: justify;
+  border-radius:5px;
+ 
+}
+
+.modaleSalvaSfondo{
+  top: 0%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(156, 156, 156, 0.514);
+  z-index: 97;
+  display: none;
+
+}
+
+.modaleSalvaCont{
+  position: relative;
+top: 25rem;
+text-align: center;
+  width:100%;
+ color: black;
+ font-size: 25px;
+background-color: rgb(217, 255, 0);
+  display: block;
+  z-index: 98;
+ 
+}
+
+.btn-modaleSalvataggio{
+position: absolute;
+
+top: 10rem;
+font-size: 30px;
+  border: none;
+  background: transparent;
+
+}
+
+
+

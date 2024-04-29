@@ -1,0 +1,56 @@
+[
+ {
+  "id_reparto": 1,
+  "Codice_Reparto": 1,
+  "Reparto": "Comando Brigata Aeromobile Friuli",
+  "Sede": "Bologna",
+  "Indirizzo": "via Giovanni Vicini n°32",
+  "CAP": "40122",
+  "Anno": 2022
+ },
+ {
+  "id_reparto": 2,
+  "Codice_Reparto": 2,
+  "Reparto": "5° Reggimento AVES",
+  "Sede": "Casarsa della Delizia (PN)",
+  "Indirizzo": "viale Venezia n° 79",
+  "CAP": "33072",
+  "Anno": 2022
+ },
+ {
+  "id_reparto": 3,
+  "Codice_Reparto": 3,
+  "Reparto": "7° Reggimento AVES",
+  "Sede": "Miramare di Rimini (RN)",
+  "Indirizzo": "via Flaminia n° 407",
+  "CAP": "47924",
+  "Anno": 2022
+ },
+ {
+  "id_reparto": 4,
+  "Codice_Reparto": 4,
+  "Reparto": "66° Reggimento f. Amb.",
+  "Sede": "Forlì (FC)",
+  "Indirizzo": "viale Roma n° 151",
+  "CAP": "47122",
+  "Anno": 2022
+ },
+ {
+  "id_reparto": 5,
+  "Codice_Reparto": 5,
+  "Reparto": "Poligono di Foce Reno",
+  "Sede": "Ravenna (RA)",
+  "Indirizzo": "via della Cooperazione n° 52",
+  "CAP": "48123",
+  "Anno": 2022
+ },
+ {
+  "id_reparto": 6,
+  "Codice_Reparto": 6,
+  "Reparto": "87° RCST",
+  "Sede": "Bologna",
+  "Indirizzo": "via Giovanni Vicini n°32",
+  "CAP": "40122",
+  "Anno": 2022
+ }
+]

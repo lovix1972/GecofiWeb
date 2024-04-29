@@ -1,0 +1,67 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+  }
+    
+  
+  
+  body,html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+  
+  }
+  
+  
+  .container{
+      position: fixed;
+      width: 100%;
+      top: 6.9rem;
+      background-color: #2b4383;
+      color: white;
+      padding: 4px 4px 4px 4px;
+      margin: 0 auto;
+      text-align: left;
+     z-index: 2;
+  
+  }
+    .filtro{
+      position: relative;
+      top: 7rem;
+      max-width: 100% ;
+      height: 5%;
+      background-color: rgb(131, 131, 247);
+      padding: 14px;
+      margin: 0 auto;
+
+  }
+
+  #finestra-elenco-da-validare{
+    position: relative;
+    top: 7rem;
+    width: 70%;
+    height: 20%;
+    border: 1px solid black;
+    background-color: antiquewhite;
+    overflow: auto;
+  }
+
+
+
+  #tabella1, tr, td, th{
+    max-width: 100%;
+    border: 1px solid black;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    box-sizing: border-box;
+    
+       
+
+
+}
+
+
+
+

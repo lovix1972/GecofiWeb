@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+  }
+  
+
+html, body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.form1{
+    position: relative;
+    top: 4px;
+    padding: 5px;
+}
+section{
+    width: 100%;
+    border: 1px solid black;
+    background-color: rgba(154, 218, 145, 0.699);
+ padding-left: 10px;
+box-sizing: border-box;
+}
+
+

@@ -1,0 +1,115 @@
+html, body{
+margin: 0;
+padding: 0;
+width: 100%;
+height: 100%;
+
+}
+
+.container{
+    width: 99%;
+    height: 95%;
+    position: absolute;
+    top: 1rem;
+    display: flex;
+ padding: 4px;
+
+}
+
+
+.container > span{
+    position: absolute;
+    top: 6.5rem;
+    font-size: 15px;
+    font-weight: bold;
+}
+.pds-da-elaborare span{
+    position: absolute;
+    top: 0.5rem;
+    font-size: 12px;
+}
+.pds-da-validare span{
+    position: absolute;
+    top: 0.5rem;
+    font-size: 12px;
+}
+
+.pds-da-elaborare {
+    position: absolute;
+    top: 8rem;
+color: black;
+font-size: 10px;
+border: 1px solid black;
+width: 80%;
+height: 27%;
+padding: 2px 4px;
+
+overflow: auto;
+
+}
+
+
+.info-capitolo{
+    position: absolute;
+    top: 8rem;
+    right: 3.2rem;
+    border: 1px solid black;
+    width: 15%;
+    height: 26.5%;
+    padding: 4px;
+    font-size: 12px;
+
+}
+
+.pds-da-validare{
+    position: relative;
+    top: 25rem;
+color: black;
+border: 1px solid black;
+width: 97%;
+height: 40%;
+padding: 4px;
+font-size: 10px;
+overflow: auto;
+
+}
+#filtro{
+   
+    position: absolute;
+    top: 0.5rem;
+    right:2rem;
+ background-color: rgb(221, 221, 221);
+ padding: 4px;
+}
+
+table{
+    position: relative;
+    top: 2rem;
+    width: 100%;
+}
+
+table #tbl-da-elaborare{
+position: absolute;
+
+font-size: 12px;
+border:1px solid black;
+}
+
+
+table #tbl-da-validare{
+
+    font-size: 12px;
+    border:1px solid black;
+    }
+
+th{
+    border: 1px solid black;
+    background-color: lightgray;
+    max-width: 100%;
+}
+
+td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+}

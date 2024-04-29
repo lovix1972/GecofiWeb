@@ -1,0 +1,64 @@
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto.eot);
+    src:  url('../fonts/Roboto-Regular.ttf') format('truetype');
+ }
+
+
+
+html body{
+    margin: 0;
+    padding:0;
+    width: 100%;
+    height: 100%;
+font-family: 'Roboto' sans-serif;
+background-color: #edf0f8;
+}
+
+#form-sessione{
+    position: relative;
+top: 12rem;
+    width: 30rem;
+    height: 20rem;
+    background-color: rgb(137 127 127);
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.7); 
+
+ align-content: center;
+ margin: 0 auto;
+  }
+
+  section#intestazione{
+   width: 100%;
+  font-family: 'Roboto' sans-serif;
+    position: relative;
+    top: 1rem;
+   color: #000000;
+   border-radius: 10px 10px 0px 0px;
+
+  }
+  #msg-session>h2 {
+    position: relative;
+color: rgb(165, 22, 22);
+    top: 2rem;
+  }
+  #msg-session>h3 {
+    position: relative;
+
+    top: 3rem;
+  }
+
+  button{
+    width: 100%;
+    position: relative;
+    top: 3rem;
+    margin: 0 auto;
+  }
+
+  .btn:hover{
+background-color: rgb(49, 49, 238);
+color: antiquewhite;
+  }

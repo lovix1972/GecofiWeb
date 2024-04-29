@@ -1,0 +1,19 @@
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+  }
+  
+footer{
+   
+    position: absolute;
+    
+    width: 100%;
+   
+   background-color: blue;
+   color: azure;
+   font-family: 'Roboto';
+   font-size: 9px;
+ 
+}

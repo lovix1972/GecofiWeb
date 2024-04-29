@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestione Economica Finanziaria</title>
+    <link rel="stylesheet" href="./CSS/StyleHeader.css">
+    <script src="./CSS/js/hamburger.js" crossorigin="anonymous"></script>
+
+<link rel="shortcut icon" href="IMG/9719OIP.ico" type="image/x-icon">
+<link rel="stylesheet" href="./CSS/StyleHeader.css">
+</head>
+
+<body>
+ <header>
+       
+           
+           
+<nav> 
+    <img src="./IMG/OIP.png" alt="">  
+    
+   <h1>BRIGATA AEROMOBILE FRIULI - DIREZIONE DI INTENDENZA</h1> 
+       
+  
+            <div class ="menu" >
+                <ul>
+                 <li><a href="/Cruscotto.php">CRUSCOTTO</a></li>
+                 <li><a href="/AcquisizionePDS.php">ACQUISIZIONE PDS</a></li>
+                 <!--<li><a href="Registro_pds.php">REGISTRO PDS</a></li>-->
+                  <!--<li><a href="gestionefascicolo.php">GESTIONE FASCICOLO</a></li>-->
+                 <div class="act-menu">
+               
+                    <!--<li><a href="#">SEZIONE FINANZIARIA</a></li>-->
+                      <div class="drop-menu">
+                      <hr>
+                      <!--<li><a href="gestioneFinanziaria.php">OPERAZIONI CAPO GESTIONE</a></li>
+                      <li><a href="#">OPERAZIONI DI CASSA</a></li>
+                      <li><a href="#">OPERAZIONI CDV</a></li>
+                      <li><a href="#">FONDO PERMANENTE</a></li>
+                      <li><a href="#">GESTIONE BILANCIO</a></li>
+                      <li><a href="#">SICOGE - INIT</a></li>-->
+                   
+                  </div>
+                </div>
+                 <li><a href="PreavvisiSiefin.php">PREAVVISI SIEFIN</a></li>
+                 <li><a href="SituazioneCapitoli_BR.php">SITUAZIONE REPARTI</a></li>
+                 <li><a href="#">SITUAZIONE G.U.</a></li>
+                 <li id="logout"><a href = "logout.php">LOGOUT</a></li>  
+                
+                </ul>
+
+               
+
+
+            </div>         
+
+
+
+
+       <button class="hamburger">
+        <!-- <span><i class="fa-solid fa-bars"></i></span> -->
+        <span></span>
+        <span></span>
+        <span></span>
+
+        </button>
+   </nav>   
+    
+  <div class="clearfix"></div>  
+
+ </header>   
+ 
+ <script>
+
+    let miapagina=window.location.pathname.split('/').at(-1); 
+    
+    let menuList = Array.from(document.querySelectorAll('.menu ul li'));
+   
+    
+    menuList.forEach(el => {
+    
+      let currentMenuElement = el.firstElementChild.attributes.href.textContent;
+    
+      if(miapagina === currentMenuElement) {
+    
+        el.classList.add('active');
+      }
+     
+    })
+    </script>
+</body>
+</html>

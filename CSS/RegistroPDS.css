@@ -1,0 +1,184 @@
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+
+
+
+html, body{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  position: relative;
+
+     text-align: center;
+     margin: 0 auto;
+     z-index: 2;
+}
+
+.filtro{
+  position: fixed;
+  text-align: left;
+  width: 100%;
+  background-color: rgb(22, 103, 255);
+  top: 6.9rem;
+  box-sizing: border-box;
+  padding: 10px;
+  color:antiquewhite;
+  margin: 0 auto;
+  box-shadow: 0 0 10px rgba(56, 56, 56, 0.89);
+z-index: 1;
+  display: flex;
+
+}
+
+@media screen and (max-width: 576px){
+  .filtro{
+    position: absolute;
+
+    top: 17rem;
+  height: 80px;
+  font-size: 12px;
+
+  }
+}
+
+@media screen and (max-width: 576px){
+  .table{
+    position: absolute;
+
+    top: 22rem;
+  height: 80px;
+  font-size: 12px;
+
+  }
+}
+
+th{
+  background-color: rgb(252, 252, 252);
+  max-width: 67%;
+  box-sizing: border-box;
+
+}
+table {
+width:100%;
+  position: relative;
+ top: 9.5rem;
+ 
+  margin: 0 auto;
+
+}
+   table, tr, td, th{
+    
+    border: 1px solid black;
+    font-size: 12px;
+    text-transform: uppercase;
+   border-collapse: collapse;
+   margin: 0 auto;
+    padding: 2px 2px;
+ 
+}
+
+tr:hover{
+  background-color: yellow;
+font-size: 30px;
+font-weight: bold;
+cursor: pointer;
+
+}
+
+
+#cpt{
+  width: 5rem;
+}
+
+
+ .tot-evidenza{
+  font-weight: bolder;
+font-family: 'Roboto', sans-serif;
+color: black;
+font-size: 20px;
+padding: 10px;
+ }
+
+
+
+
+ .modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(82, 82, 82, 0.363);
+ z-index: 99;
+
+}
+
+.modal-content {
+  background-color: #ffffffe7;
+  margin: 10% auto;
+
+border: 1px solid, black;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 10px 10px rgba(41, 41, 41, 0.507);
+  width: 40%;
+  height: 50%;
+text-align: left;
+
+  }
+
+ #intestazione-modale{
+  position: relative;
+  width: 100%;
+  font-size: 20px;
+  color: rgb(7, 7, 7);
+  background-color: rgb(255, 255, 255);
+
+}
+
+  .modal-content  button{
+
+   position: relative;
+   margin: 0 auto;
+  
+    }
+
+  .modal-content  button:hover{
+
+  background-color: brown;
+
+  }
+.container-dati{
+  position: relative;
+  width: 98%;
+  height: 80%;
+  
+  padding: 10px;
+
+}
+
+button, .fa-solid {
+
+  background-color: transparent;
+  border-color: transparent;
+
+}
+
+  #avvia{
+  color: antiquewhite;
+  cursor: pointer;
+}
+
+
+
+
+

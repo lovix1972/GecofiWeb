@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrazione Utente</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link rel="stylesheet" href="./CSS/Style-Rec.css">
+    <link rel="shortcut icon" href="9719OIP.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <div class="box-rec">
+     
+        
+     <img src="./IMG/br_fri_scud.png" alt="">
+        <div class="input-rec">
+            <section>
+           
+            <p>Registrazione Utente</p>
+            <form action="registraUtenti.php" method="POST">
+            <label for="ente">Ente</label><br>
+            <select name="ente" id="ente" style="width: 250px;">
+                <option></option>
+            <option value="1">Comando Brigata Aeromobile Friuli</option>
+            <option value="2">5° Reggimento AVES</option>
+            <option value="3">7° Reggimento AVES</option>
+            <option value="4">66° Reggimento f. Aeromobile</option>
+            <option value="5">Poligono Foce Reno</option>
+            <option value="6">87° RCST</option>
+            <option value="7">1° Reggimento AVES</option>
+            <option value="8">2° Reggimento AVES</option>
+            <option value="9">3° REOS</option>
+            <option value="10">4° Reggimento AVES</option>
+            <option value="11">21° Gr.Sq. AVES</option>
+            <option value="12">28° Gr.Sq. AVES</option>
+            <option value="13">34° Gr.Sq. AVES</option>
+
+            </select>
+           <br>
+            <label for="grado">Grado</label><br>
+            <select name="grado" id="grado" style="width: 250px;">
+                <option></option>
+            <option value="Soldato">Soldato</option>
+            <option value="Caporale">Caporale</option>
+            <option value="Caporale Maggiore">Caporale Maggiore</option>
+            <option value="Graduato">Graduato</option>
+            <option value="Graduato Scelto">Graduato Scelto</option>
+            <option value="Graduato Capo">Graduato Capo</option>
+            <option value="Graduato Aiutante">Graduato Aiutante</option>
+            <option value="Sergente">Sergente</option>
+
+            </select>
+                
+                <br>
+            <label for="nome">Nome</label><br>
+            <input type="text" name="nome" ><br>
+            <label for="cognome">Cognome</label><br>
+            <input type="text" name="cognome" ><br>
+            <label for="utente">Utente</label><br>
+            <input type="text" name="utente" ><br>
+            <label for="password">Password</label><br>
+            <input type="password" name="password" ><br>
+    
+            
+             
+                 <span></span>
+    
+
+
+            </SECTION>
+            <div id="bottoni">
+                <button  id="btn-submit" type="submit" >Registra</button>
+                <button type="reset" onclick="window.location.href='index.html'">Annulla</button>
+                 
+       
+            </form>
+        
+            
+        </div>
+       
+    </div>
+    
+    <script>  
+                function sub(){
+                   
+                   let span=document.querySelector('span');
+                   console.log('span');
+                    let pulsanteSub = document.querySelector('#btn-submit');
+       
+                    pulsanteSub.addEventListener('onclick', ()=>{
+                       span.innerHTML="Prova";
+
+
+                    });
+                   
+       
+                      
+                    
+                     
+                    }
+                   </script>
+</body>
+</html>

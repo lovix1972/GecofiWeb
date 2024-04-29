@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+  }
+  
+  body, html{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto' sans-serif;
+    background-color: beige;
+display: flex;
+  }
+.container-fascicolo{
+    position: relative;
+    top: 3rem;
+
+    width: 90%;
+    height: 90vh;
+   display: flex;
+   flex-wrap: wrap;
+flex-direction: column;
+justify-content: flex-start;
+
+}
+
+.container-fascicolo span{
+    position: relative;
+    top: 5rem;
+    padding: 5px;
+margin-left: 10px;
+}
+  .det-fascicolo{
+
+    position: relative;
+   width: 65.5%;
+   height: 20%;
+    top: 5rem;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid black;
+   
+    background-color: lightgray;
+    
+  }
+
+  .det-fascicolo #n_fascicolo{
+    width: 10rem;
+
+  }
+  .det-fascicolo #data{
+    width: 10rem;
+
+  }
+  .det-fascicolo #oggetto{
+    width: 90%;
+    height: 20%;
+
+  }
+  .det-fascicolo #note{
+    width: 90%;
+    height: 30%;
+text-align: left;
+  }
+
+  .btn{
+    position: absolute;
+    top: 20rem;
+    padding-top: 10px;
+    margin-left: 5px;
+
+  }
+
+
+  .det-fascicolo .btn-ctr #registra{
+position: absolute;
+top: 4.5rem;
+width: 5rem;
+right: 10px;
+font-size: 10px;
+margin: 0 auto;
+
+  }
+
+  .det-fascicolo .btn-ctr #ricerca-cig{
+    position: absolute;
+    width: 5rem;
+    top: 5.5rem;
+    right: 10px;
+    padding: 5px;
+    font-size: 10px;
+    margin: 15px auto;
+      }
+
+  .det-pds{
+    position: absolute;
+    top: 25rem;
+
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    width: 60%;
+   height: 35%;
+   overflow: auto; 
+     
+  }
+
+  table {
+ position: relative;
+    width:100%;
+ 
+       
+    
+    }
+
+  table, tr, td, th{
+    
+    border: 1px solid black;
+    font-size: 10px;
+    text-transform: uppercase;
+   border-collapse: collapse;
+   text-align: center;
+
+
+ 
+}
+
+.info-percorso{
+    position: absolute;
+    top: 82vh;
+    margin: 5px;
+    border: 1px solid black; 
+    width: 60%;
+    padding: 5px;
+   
+}
+
+.info-percorso #percorso{
+position: relative;
+
+    width: 60%;
+}
+
+
+thead{
+    background-color: lightgrey;
+}
+
+.ricerca-fascicolo{
+    position: absolute;
+top: 13rem;
+right: 2rem;
+
+    border: 1px solid black;
+    padding: 5px;
+    margin: 5px;
+    width: 36%;
+   height: 63vh;
+   overflow: auto;
+   margin: 0 auto;
+
+}
+.filtro-fascicolo{
+    position: absolute;
+   padding: 5px;
+    top: 9.5rem;
+    right: 2rem;
+    height: 2.5rem;
+    border: 1px solid black;
+    width: 36%;
+}
