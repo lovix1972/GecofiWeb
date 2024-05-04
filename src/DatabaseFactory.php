@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Pasquale\GecofiOffice;
+namespace Pasquale\Gecofi_Office;
 
 use Pasquale\GecofiOffice\DatabaseContract;
 use Exception;

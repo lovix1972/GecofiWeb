@@ -3,7 +3,7 @@
         'name' => 'pasquale/gecofi_office',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '1f91646ef81d9b21aa5fabd0732450dac8b64629',
+        'reference' => '162c5ed639c45bc8e0356553600c5f45bf731166',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -40,7 +40,7 @@
         'pasquale/gecofi_office' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '1f91646ef81d9b21aa5fabd0732450dac8b64629',
+            'reference' => '162c5ed639c45bc8e0356553600c5f45bf731166',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

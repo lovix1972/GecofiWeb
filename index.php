@@ -1,3 +1,23 @@
+<?php
+
+require ("./vendor/autoload.php");
+
+use Pasquale\Gecofi_Office\DBConfig;
+use Pasquale\Gecofi_Office\MyPDO;
+
+$DBConfig=new DBConfig(
+"localhost",
+"gecofi",
+"3306",
+"lovix",
+"Misery12"
+
+);
+
+$pdo=new MyPDO($DBConfig);
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+?>
 <!DOCTYPE html>
 <html lang="IT">
 <head>
@@ -42,7 +62,7 @@
       <select type="text"  name ="codente" id="codente" >
             <option disabled selected>Centro Funzionale</option>
             <?php
-            include_once('connect.php');
+           // include_once('connect.php');
             $query=$pdo->query("SELECT ID_Reparto, Reparto  FROM Reparti order by ID_Reparto ASC");
                 while($row=$query->fetch()){
 

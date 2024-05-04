@@ -15,7 +15,7 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         'P' => 
         array (
             'PhpParser\\' => 10,
-            'Pasquale\\GecofiOffice\\' => 22,
+            'Pasquale\\Gecofi_Office\\' => 23,
         ),
         'D' => 
         array (
@@ -33,7 +33,7 @@ class ComposerStaticInitfbee484fbcb98ba45566f17e8eb69e9b
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
         ),
-        'Pasquale\\GecofiOffice\\' => 
+        'Pasquale\\Gecofi_Office\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

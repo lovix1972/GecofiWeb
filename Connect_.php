@@ -1,13 +1,15 @@
 <?php
 
 
-$type="mysql";
-$servername = "localhost";
-$usernamedb = "dbadmin";
-$passworddb = "Misery12";
-$dbname = "Gecofi";
-$charset="utf8mb4";
-$port="3306";
+require ("./vendor/autoload.php");
+
+//$type="mysql";
+//$servername = "localhost";
+//$usernamedb = "lovix";
+//$passworddb = "Misery12";
+//$dbname = "Gecofi";
+//$charset="utf8mb4";
+//$port="3306";
 
 
 $options    =   [        PDO::ATTR_ERRMODE               =>  PDO::ERRMODE_EXCEPTION,
@@ -15,7 +17,7 @@ $options    =   [        PDO::ATTR_ERRMODE               =>  PDO::ERRMODE_EXCEPT
                          PDO::ATTR_EMULATE_PREPARES      => false,
                 ];
 
-    $dsn="$type:host=$servername;dbname=$dbname;charset=$charset;port=$port";
+    //$dsn="$type:host=$servername;dbname=$dbname;charset=$charset;port=$port";
 
 try {
 

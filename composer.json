@@ -1,0 +1,20 @@
+{
+    "name": "pasquale/gecofi_office",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Pasquale\\Gecofi_Office\\": "src/",
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pasquale Lovicu",
+            "email": "pasquale.lovicu@alice.it"
+        }
+    ],
+    "require": {},
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    }
+}
