@@ -1,5 +1,6 @@
 <?php
 session_start();
+/*require ("./vendor/autoload.php");*/
 
 ?>
 
@@ -84,13 +85,13 @@ session_start();
                  
                       include('Connect.php');
 
-                      //$id=$_POST['id'];
-                      $sql="SELECT  ID_Reparto, Reparto from Reparti";
+                      $id=$_POST['id'];
+                      $sql="SELECT ID_Reparto, Reparto from Reparti";
                       echo '<option></option>';
                       $stmt=$pdo->query($sql);
 
                       while($row=$stmt->fetch()){
-                      
+                      var_dump($row);
                       echo '<option value ="'.$row['ID_Reparto'].'">'.$row['ID_Reparto'].' - '.$row['Reparto'].' </option>';
 
                       }

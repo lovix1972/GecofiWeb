@@ -15,8 +15,8 @@
 
 session_start();
 
-
-  require ('./vendor/autoload.php');  
+include ("Connect.php");
+  /*require ('./vendor/autoload.php');  */
   
  if (empty($_POST['utente']) || empty($_POST['password']) ||  empty($_POST['codente'])  ){
   echo "Inserire le credenziali complete", '<a href="./index.php" target="_top" class="msg-login"> Login</a>';
