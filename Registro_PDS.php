@@ -17,15 +17,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="./IMG/9719OIP.ico" type="image/x-icon">
-  <title>Registro</title>
-
+    <link rel="shortcut icon" href="./IMG/9719OIP.ico" type="image/x-icon">
+ <title>Registro</title>
 
 
 
 <script src="./CSS/js/modal.js" defer></script>
-<script src="./CSS/js/fontawesome.js" crossorigin="anonymous"></script>
-<script src="./CSS/js/jquery.min.js"></script>
+<script src="./CSS/js/fontawesome.js" defer ></script>
+<script src="./CSS/js/jquery.min.js" defer></script>
 <link rel="stylesheet" href="./CSS/RegistroPDS.css">
 </head>
 
@@ -58,16 +57,18 @@ Ricerca per: <select id="filtro" name ="Filtro" class="form-select" required>
             <option value="num_PDS">n_PDS</option>
 </select>
 Reparto: 
-<select name ="ID_Reparto" class="form-select" id="ID_Reparto" required>
-<option value=""></option>
+<select name ="id_eparto" class="form-select" id="id_reparto" required>
+<option></option>
             <?php
-            include_once('connect.php');
-            $query=$pdo->query("SELECT ID_Reparto, Reparto  FROM Reparti order by ID_Reparto ASC");
+            include_once('Connect.php');
+
+            $query=$pdo->query("SELECT id_Reparto, Reparto FROM reparti order by id_Reparto ASC");
+            
                 while($row=$query->fetch()){
 
 ?>
            
-           <option value = "<?php echo $row['ID_Reparto'];?>"><?php echo $row['Reparto'];?></option>
+           <option value = "<?php echo $row['id_Reparto'];?>"><?php echo $row['Reparto'];?></option>
            <?php
              }  
 ?>    
@@ -114,13 +115,13 @@ Reparto:
   
 
 
- if(isset($_POST['cerca']) && isset($_POST['ID_Reparto']) ){
+ if(isset($_POST['cerca']) && isset($_POST['id_Reparto']) ){
                 $anno = $_POST['anno'];
                 $Filtro=$_POST['Filtro'];
                 $cerca = $_POST['cerca'];
-                $ID_Reparto = $_POST['ID_Reparto'];
+                $ID_Reparto = $_POST['id_Reparto'];
 
-                $query=$pdo->query("SELECT * , date_format(Data_protocollo,'%d/%m/%Y') as Data_protocollo FROM Registro_PDS WHERE $Filtro like '%".$cerca."%' and ID_Reparto=$ID_Reparto and anno= $anno");
+                $query=$pdo->query("SELECT * , date_format(Data_protocollo,'%d/%m/%Y') as Data_protocollo FROM Registro_PDS WHERE $Filtro like '%".$cerca."%' and id_Reparto=$ID_Reparto and anno= $anno");
                   while($cicle=$query->fetch()){
                 
 

@@ -29,7 +29,7 @@
 <h2>SESSIONE SCADUTA O NON AUTORIZZATA !</h2>
 <h3>Effettuare il login per accedere</h3>
 
-<a href="index.php"><button class="btn">Login</button></a>
+<a href="index.html"><button class="btn">Login</button></a>
  </div>
 
       

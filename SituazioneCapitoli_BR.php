@@ -18,7 +18,7 @@ include ("Connect.php");
 if($_SESSION['codente'] !=1){
 
   include("./header/header.html"); 
-  $filtra_Amm="where capitoli.id_Reparto='".$_SESSION['codente']."' and";
+  $filtra_Amm="where capitoli.id_reparto='".$_SESSION['codente']."' and";
   $filtra_Amm1="where id_Reparto='".$_SESSION['codente']."'";
   $filtra_Amm2="WHERE id_Reparto = '".$_SESSION['codente']."' and ";
 }else{
@@ -27,11 +27,11 @@ if($_SESSION['codente'] !=1){
 include("./header/headerAmm.html");
 
 
-if(isset($_GET['ID_Reparto'])){
+if(isset($_GET['id_reparto'])){
 
 
-$ID_Reparto = $_GET['ID_Reparto'];
-$filtra_Amm="WHERE Capitoli.id_Reparto = '".$ID_Reparto."'  and ";
+$ID_Reparto = $_GET['id_reparto'];
+$filtra_Amm="WHERE capitoli.id_Reparto = '".$ID_Reparto."'  and ";
 
 $filtra_Amm1="";
 $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
@@ -50,8 +50,8 @@ $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
    
 <link rel="shortcut icon" href="./IMG/9719OIP.ico" type="image/x-icon">
 <link rel="stylesheet" href="./CSS/preavvisi.css"> 
-<script src="./CSS/JS/fontawesome.js" crossorigin="anonymous"></script>
-<script src="./css/js/jquery.min.js"></script>
+<!--<script src="./CSS/JS/fontawesome.js" crossorigin="anonymous" ></script>-->
+<script src="./CSS/js/jquery.min.js"  ></script>
 </head>
 
    <body>
@@ -66,23 +66,23 @@ $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
   Anno: 
   <select name ="Anno" id="anno" >
   <?php
-$sql="SELECT Anno from Capitoli group by Anno desc ";
+    $sql="SELECT Anno from capitoli group by Anno ";
 
-$stmt=$pdo->query($sql);
+    $stmt=$pdo->query($sql);
 
-  while($row=$stmt->fetch()){
+    while($row=$stmt->fetch()){
     
-  echo '<option value ="'.$row['Anno'].'">'.$row["Anno"].'</option>';
+    echo '<option value ="'.$row['Anno'].'">'.$row["Anno"].'</option>';
   }?>
 </select>  
 
 
 
 Reparto: 
-<select name ="ID_Reparto" id="idreparto" >
+<select name ="id_reparto" id="id_reparto" >
 <option selected disabled  >Scegli Reparto</option>
 <?php
-$sql="SELECT id_Reparto, Reparto from Reparti $filtra_Amm1";
+$sql="SELECT id_Reparto, Reparto from reparti $filtra_Amm1";
 
 $stmt=$pdo->query($sql);
   
@@ -123,39 +123,31 @@ $stmt=$pdo->query($sql);
       <?php
 
 
-if(isset($_GET['ID_Reparto']) && isset($_GET['Anno'])   ) {
+if(isset($_GET['id_Reparto']) && isset($_GET['Anno'])   ) {
 
-  $ID_Reparto = $_GET['ID_Reparto'];
+  $ID_Reparto = $_GET['id_Reparto'];
   $Anno = $_GET['Anno'];
 
 
-        $query=$pdo->query("SELECT  Reparto,capitolo, art,
-     
-        SUM(Capitoli.Preavvisi) AS Preavvisi, 
-        SUM(previsto_impegno) AS prev_impegno,
-        SUM(impegnato) AS Impegnato,
-        SUM(Contabilizzato) AS contabilizzato,
-        SUM(previsto_impegno + Impegnato + Contabilizzato) AS totspeso
-        FROM Registro_PDS  $filtra_Amm2 anno=$Anno and Registrato=1 
-       
-        GROUP BY capitolo , art "); 
-    
+        $query=$pdo->query("SELECT * FROM Registro_PDS group by Capitolo, Art"); 
+   
         
         while($cicle=$query->fetch() ){ 
+       
           echo"
         
         
           <tr id='riga'>
           
           <td>".$cicle['Reparto']."</td>
-          <td>".$cicle['capitolo']."</td>
-          <td>".$cicle['art']."</td>
+          <td>".$cicle['Capitolo']."</td>
+          <td>".$cicle['Art']."</td>
                     
 
-          <td>".number_format($cicle["prev_impegno"],2,',','.')."</td>
+          <td>".number_format($cicle["previsto_impegno"],2,',','.')."</td>
           <td>".number_format($cicle["Impegnato"],2,',','.')."</td>
-          <td>".number_format($cicle["contabilizzato"],2,',','.')."</td>
-          <td>".number_format($cicle["totspeso"],2,',','.')."</td>
+          <td>".number_format($cicle["Contabilizzato"],2,',','.')."</td>
+          
      
           </tr>";
           
@@ -164,7 +156,7 @@ if(isset($_GET['ID_Reparto']) && isset($_GET['Anno'])   ) {
 
 
 
-    $query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM Registro_pds $filtra_Amm2 anno=$Anno and registrato=1 ");
+    $query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM Registro_PDS$filtra_Amm2 anno=$Anno and registrato=1 ");
 
     while($cicle=$query->fetch())  { 
 

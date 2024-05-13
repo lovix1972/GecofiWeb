@@ -36,30 +36,21 @@ session_start();
 
                     <select  class="form-control" id="validationTooltip00" name="grado" required>
                     <option disabled selected>Qualifica</option>
-                      <option value="Soldato">Soldato</option>
-                      <option value="Caporale">Caporale</option>
-                      <option value="Caporale maggiore">Caporale maggiore</option>
-                      <option value="Graduato">Graduato</option>
-                      <option value="Graduato Scelto">Graduato Scelto</option>
-                      <option value="Graduato Capo">Graduato Capo</option>
-                      <option value="Graduato Aiutante">Graduato Aiutante</option>
-                      <option value="Sergente">Sergente</option>
-                      <option value="Sergente Maggiore">Sergente Maggiore</option>
-                      <option value="Sergente Maggiore Capo">Sergente Maggiore Capo</option>
-                      <option value="Sergente Maggiore Aiutante">Sergente Maggiore Aiutante</option>
-                      <option value="Maresciallo">Maresciallo</option>
-                      <option value="Maresciallo Ordinario">Maresciallo Ordinario</option>
-                      <option value="Maresciallo Capo">Maresciallo Capo</option>
-                      <option value="Primo Maresciallo">Primo Maresciallo</option>
-                      <option value="Luogotenente">Luogotenente</option>
-                      <option value="Primo Luogotenente">1° Luogotenente</option>
-                      <option value="Sottotenente">Sottotenente</option>
-                      <option value="Tenente">Tenente</option>
-                      <option value="Capitano">Capitano</option>
-                      <option value="Maggiore">Maggiore</option>
-                      <option value="Tenenete Colonnello">Tenenete Colonnello</option>
-                      <option value="Colonnello">Colonnello</option>
-                      <option value="Genereale di Brigata">Genereale di Brigata</option>
+                    <?php
+                 
+                 require_once ('Connect.php');
+
+                 $sql="SELECT grado from gradi";
+                 echo '<option></option>';
+                 $stmt=$pdo->query($sql);
+
+                 while($row=$stmt->fetch()){
+              
+                 echo '<option value ="'.$row['grado'].'">'.$row['grado'].' </option>';
+
+                 }
+          
+                 ?>
 
 
                     </select>
@@ -83,27 +74,26 @@ session_start();
                      <option disabled selected >Ente di appartenenza</option>
                       <?php
                  
-                      include('Connect.php');
+                      require_once ('Connect.php');
 
-                      $id=$_POST['id'];
-                      $sql="SELECT ID_Reparto, Reparto from Reparti";
+                     
+                      $sql="SELECT id_reparto, reparto from reparti";
                       echo '<option></option>';
                       $stmt=$pdo->query($sql);
 
                       while($row=$stmt->fetch()){
-                      var_dump($row);
-                      echo '<option value ="'.$row['ID_Reparto'].'">'.$row['ID_Reparto'].' - '.$row['Reparto'].' </option>';
+                    
+                      echo '<option value ="'.$row['id_reparto'].'">'.$row['id_reparto'].' - '.$row['reparto'].' </option>';
 
                       }
                       ?>
                       </select>
-                                 
+                               
            
-              
-               
+                             
                 <div class="button">
                 <button class="btn btn-primary" type="submit" >Registra</button>
-                <button><a href="./index.php">Login</a></button>
+                <button><a href="./index.html">Login</a></button>
                   </div>              
         
          

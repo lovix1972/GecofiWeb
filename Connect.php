@@ -5,7 +5,7 @@
 
 $type="mysql";
 $servername = "localhost";
-$usernamedb = "root";
+$usernamedb = "lovix";
 $passworddb = "Misery12";
 $dbname = "gecofi";
 $charset="utf8mb4";

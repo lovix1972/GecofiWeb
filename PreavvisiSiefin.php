@@ -41,7 +41,7 @@ if($_SESSION['codente'] !=1){
 <form action="PreavvisiSiefin.php" class ="form-select" method="GET">
 
 Anno: <select name ="Anno" ><?php
-$sql="SELECT Anno from capitoli group by Anno DESC";
+$sql="SELECT Anno from capitoli group by Anno";
 $stmt=$pdo->query($sql);
 while($row=$stmt->fetch()){
 echo '<option value ="'.$row['Anno'].'">'.$row["Anno"].'</option>';;
@@ -50,22 +50,22 @@ echo '<option value ="'.$row['Anno'].'">'.$row["Anno"].'</option>';;
 ?>
 </select>  
 
-Reparto: <select name ="ID_Reparto"  required><?php
-$sql="SELECT id_Reparto, Reparto from Reparti $filtra_Amm ";
-echo '<option value =""></option>';
+Reparto: <select name ="id_Reparto"  required><?php
+$sql="SELECT id_Reparto, reparto from reparti $filtra_Amm ";
+echo '<option></option>';
 $stmt=$pdo->query($sql);
 while($row=$stmt->fetch()){
-echo '<option value ="'.$row['id_Reparto'].'">'.$row["Reparto"].'</option>';
+echo '<option value ='.$row['id_Reparto'].'>'.$row["reparto"].'</option>';
 }?>
 </select> 
 Capitolo: 
 <select name="cpt" id="cpt">
 <?php
-$sql="SELECT  Capitolo from capitoli group by Capitolo ";
+$sql="SELECT  capitolo from capitoli group by capitolo ";
 echo '<option value =""></option>';
 $stmt=$pdo->query($sql);
 while($row=$stmt->fetch()){
-echo '<option value ="'.$row['Capitolo'].'">'.$row["Capitolo"].'</option>';
+echo '<option value ="'.$row['capitolo'].'">'.$row["capitolo"].'</option>';
 }
 ?>
 </select>
@@ -110,11 +110,11 @@ echo '<option value ="'.$row['Art'].'">'.$row["Art"].'</option>';
 
 
 
- if(isset($_GET['ID_Reparto']) && isset($_GET['Anno']) && isset($_GET['cpt']) && isset($_GET['art']) )    
+ if(isset($_GET['id_Reparto']) && isset($_GET['Anno']) && isset($_GET['cpt']) && isset($_GET['art']) )    
  
  {
 
-  $ID_Reparto = $_GET['ID_Reparto'];
+  $ID_Reparto = $_GET['id_Reparto'];
   $Anno = $_GET['Anno'];
   $cpt = $_GET['cpt'];
   $art = $_GET['art'];
@@ -131,12 +131,12 @@ echo '<option value ="'.$row['Art'].'">'.$row["Art"].'</option>';
          }
 
 
-                 $query=$pdo->query("SELECT capitoli.IDV, capitoli.Anno, capitoli.id_Reparto, Reparti.Reparto, capitoli.capitolo, capitoli.art, capitoli.prog, sum(capitoli.Preavvisi) as Preavvisi,  capitoli.Descrizione, capitoli.Contrattualizzabile, capitoli.CODATTIVITA, capitoli.PDC, capitoli.IDV FROM capitoli right JOIN Reparti ON capitoli.id_Reparto = Reparti.id_reparto where  capitoli.id_Reparto=$ID_Reparto and capitoli.Anno=$Anno $capitolo  group by capitoli.IDV"); 
+                 $query=$pdo->query("SELECT capitoli.IDV, capitoli.Anno, capitoli.id_Reparto, reparti.rRparto, capitoli.capitolo, capitoli.art, capitoli.prog, sum(capitoli.Preavvisi) as Preavvisi,  capitoli.Descrizione, capitoli.Contrattualizzabile, capitoli.CODATTIVITA, capitoli.PDC, capitoli.IDV FROM capitoli right JOIN Reparti ON capitoli.id_Reparto = reparti.id_reparto where  capitoli.id_Reparto=$ID_Reparto and capitoli.Anno=$Anno $capitolo  group by capitoli.IDV"); 
 
                  while($cicle=$query->fetch()){
                  echo"
                  <tr>";
-                 echo"<td>".$cicle['Reparto']."</td>";
+                 echo"<td>".$cicle['reparto']."</td>";
                  echo"<td>".$cicle['capitolo']."</td>";
                  echo"<td>".$cicle['art']."</td>";
                  echo"<td>".$cicle['prog']."</td>";

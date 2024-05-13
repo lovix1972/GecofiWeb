@@ -4,7 +4,7 @@ include('Connect.php');
 
 
 
-$query=$pdo->query("SELECT * FROM Capitoli ");
+$query=$pdo->query("SELECT * FROM capitoli ");
 
 $count= $query->fetch();
 
