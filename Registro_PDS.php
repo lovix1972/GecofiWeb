@@ -22,9 +22,9 @@
 
 
 
-<script src="./CSS/js/modal.js" defer></script>
-<script src="./CSS/js/fontawesome.js" defer ></script>
-<script src="./CSS/js/jquery.min.js" defer></script>
+<script src="/CSS/js/modal.js" defer></script>
+<script src="/CSS/js/fontawesome.js"  ></script>
+<script src="/CSS/js/jquery.min.js" ></script>
 <link rel="stylesheet" href="./CSS/RegistroPDS.css">
 </head>
 
@@ -121,7 +121,7 @@ Reparto:
                 $cerca = $_POST['cerca'];
                 $ID_Reparto = $_POST['id_Reparto'];
 
-                $query=$pdo->query("SELECT * , date_format(Data_protocollo,'%d/%m/%Y') as Data_protocollo FROM Registro_PDS WHERE $Filtro like '%".$cerca."%' and id_Reparto=$ID_Reparto and anno= $anno");
+                $query=$pdo->query("SELECT * , date_format(Data_protocollo,'%d/%m/%Y') as Data_protocollo FROM registro_pds WHERE $Filtro like '%".$cerca."%' and id_Reparto=$ID_Reparto and Anno= $anno");
                   while($cicle=$query->fetch()){
                 
 

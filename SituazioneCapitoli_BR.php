@@ -10,10 +10,8 @@ header('location:session.php');
 
 } 
 
-include ("Connect.php");  
 
-
-  
+  include "Connect.php"; 
 
 if($_SESSION['codente'] !=1){
 
@@ -26,22 +24,23 @@ if($_SESSION['codente'] !=1){
 
 include("./header/headerAmm.html");
 
+ 
 
-if(isset($_GET['id_reparto'])){
+if(isset($_GET['id_Reparto'])){
 
 
-$ID_Reparto = $_GET['id_reparto'];
-$filtra_Amm="WHERE capitoli.id_Reparto = '".$ID_Reparto."'  and ";
+$ID_Reparto = $_GET['id_Reparto'];
+$filtra_Amm="WHERE capitoli.id_Reparto = '".$ID_Reparto."' ";
 
 $filtra_Amm1="";
-$filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
+$filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' ";
 
 
 }
 }
 
 ?>  
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -50,8 +49,9 @@ $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
    
 <link rel="shortcut icon" href="./IMG/9719OIP.ico" type="image/x-icon">
 <link rel="stylesheet" href="./CSS/preavvisi.css"> 
-<!--<script src="./CSS/JS/fontawesome.js" crossorigin="anonymous" ></script>-->
+
 <script src="./CSS/js/jquery.min.js"  ></script>
+<script src="./CSS/js/hamburger.js" defer   ></script>
 </head>
 
    <body>
@@ -61,7 +61,7 @@ $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
 <div class='container'>
 <div class="Filtra">
 
-<form action="SituazioneCapitoli_BR.php" class ="form-select" method="GET">
+<form action="" class ="form-select" method="GET">
 
   Anno: 
   <select name ="Anno" id="anno" >
@@ -79,8 +79,9 @@ $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' and ";
 
 
 Reparto: 
-<select name ="id_reparto" id="id_reparto" >
+<select  name ="id_Reparto" id="id_reparto" >
 <option selected disabled  >Scegli Reparto</option>
+<option value ="<?=$row['Reparto']?>"></option>
 <?php
 $sql="SELECT id_Reparto, Reparto from reparti $filtra_Amm1";
 
@@ -89,7 +90,8 @@ $stmt=$pdo->query($sql);
   while($row=$stmt->fetch()){
  
   echo '<option value ="'.$row['id_Reparto'].'">'.$row["Reparto"].'</option>';
-  }?>
+  }
+  ?>
 
   </select> 
 
@@ -115,23 +117,28 @@ $stmt=$pdo->query($sql);
         <th >Previsto Impegno</th>
         <th >Impegnato</th>
         <th >Contabilizzato</th>
-        <th >Totale Speso</th>
+        
     
          </thead>
             
       
       <?php
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
 
-if(isset($_GET['id_Reparto']) && isset($_GET['Anno'])   ) {
+if(isset($_GET['id_reparto']) and isset($_GET['Anno'])){
 
-  $ID_Reparto = $_GET['id_Reparto'];
-  $Anno = $_GET['Anno'];
+$Anno=$_GET['Anno'];
+
+ } 
 
 
-        $query=$pdo->query("SELECT * FROM Registro_PDS group by Capitolo, Art"); 
-   
-        
+        $query=$pdo->query("SELECT Anno, Reparto, Capitolo, Art, sum(previsto_impegno) AS previsto_impegno, sum(Impegnato) AS Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds $filtra_Amm2 group by capitolo, art "); 
+
+    
+
         while($cicle=$query->fetch() ){ 
        
           echo"
@@ -144,31 +151,31 @@ if(isset($_GET['id_Reparto']) && isset($_GET['Anno'])   ) {
           <td>".$cicle['Art']."</td>
                     
 
-          <td>".number_format($cicle["previsto_impegno"],2,',','.')."</td>
-          <td>".number_format($cicle["Impegnato"],2,',','.')."</td>
-          <td>".number_format($cicle["Contabilizzato"],2,',','.')."</td>
+          <td>".$cicle["previsto_impegno"]."</td>
+          <td>".$cicle["Impegnato"]."</td>  
+          <td>".$cicle["Contabilizzato"]."</tde=>
           
      
           </tr>";
-          
-      }
+           }  
+      
     // Recupero per totali tabella   <td>".number_format($cicle["totPreavvisi"]-$cicle["totalespeso"],2,',','.')."</td><td>".number_format($cicle["totPreavvisi"],2,',','.')."</td>//
 
 
 
-    $query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM Registro_PDS$filtra_Amm2 anno=$Anno and registrato=1 ");
+    $query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds  $filtra_Amm2");
 
     while($cicle=$query->fetch())  { 
 
       echo"
           <tr id='totali'>
-          <td colspan=4>
+          <td colspan=3>
           
           <td style='font-size:15px; font-weight:bold;'>".number_format($cicle["previsto_impegno"],2,',','.')."</td>
           <td style='font-size:15px; font-weight:bold;'>".number_format($cicle["Impegnato"],2,',','.')."</td>  
           <td style='font-size:15px; font-weight:bold;'>".number_format($cicle["Contabilizzato"],2,',','.')."</td></tr>";
       }       
-}
+
  
  
     ?>
@@ -187,7 +194,7 @@ if(isset($_GET['id_Reparto']) && isset($_GET['Anno'])   ) {
  
 
 
-  <script>
+ <script>
      
        
         let riga = document.querySelector('#riga');
@@ -199,8 +206,8 @@ if(isset($_GET['id_Reparto']) && isset($_GET['Anno'])   ) {
      
 
               riga=addEventListener('click',(e)=>{
-      
-                  if(e.target != riga  ){
+      console.log(e);
+                  if(e.target != riga  ){ 
 
                   sfondoModale.style.display='none';
                   modale.style.display = 'none'; 
@@ -210,10 +217,8 @@ if(isset($_GET['id_Reparto']) && isset($_GET['Anno'])   ) {
                 
                   let capitolo=e.target.parentElement.cells[1].textContent;
                   let art=e.target.parentElement.cells[2].textContent;
-          
-
-
          
+     
                                
           
           $.ajax({
