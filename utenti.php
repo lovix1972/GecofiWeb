@@ -52,7 +52,7 @@ include("./header/headerAmm.html");
 
    <?php
 
-   $query=$pdo->query("SELECT *  FROM utenti");
+   $query=$pdo->query("SELECT * FROM utenti");
 
    while($cicle=$query->fetch()){
    

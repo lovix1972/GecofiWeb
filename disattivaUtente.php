@@ -10,7 +10,7 @@
 
 <?php
 
-include('connect.php');
+include('Connect.php');
 
 if(isset($_GET['idutente'])){
 
