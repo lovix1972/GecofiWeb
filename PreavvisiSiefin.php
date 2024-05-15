@@ -131,7 +131,7 @@ echo '<option value ="'.$row['Art'].'">'.$row["Art"].'</option>';
          }
 
 
-                 $query=$pdo->query("SELECT capitoli.IDV, capitoli.Anno, capitoli.id_Reparto, reparti.rRparto, capitoli.capitolo, capitoli.art, capitoli.prog, sum(capitoli.Preavvisi) as Preavvisi,  capitoli.Descrizione, capitoli.Contrattualizzabile, capitoli.CODATTIVITA, capitoli.PDC, capitoli.IDV FROM capitoli right JOIN Reparti ON capitoli.id_Reparto = reparti.id_reparto where  capitoli.id_Reparto=$ID_Reparto and capitoli.Anno=$Anno $capitolo  group by capitoli.IDV"); 
+                 $query=$pdo->query("SELECT capitoli.IDV, capitoli.Anno, capitoli.id_Reparto, reparti.Reparto, capitoli.capitolo, capitoli.art, capitoli.prog, sum(capitoli.Preavvisi) as Preavvisi, capitoli.Descrizione, capitoli.Contrattualizzabile, capitoli.CODATTIVITA, capitoli.PDC, capitoli.IDV FROM capitoli right JOIN Reparti ON capitoli.id_Reparto = reparti.id_Reparto where  capitoli.id_Reparto=$ID_Reparto and capitoli.Anno=$Anno $capitolo  group by capitoli.IDV"); 
 
                  while($cicle=$query->fetch()){
                  echo"

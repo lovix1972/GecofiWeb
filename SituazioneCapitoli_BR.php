@@ -124,9 +124,7 @@ $stmt=$pdo->query($sql);
       
       <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 if(isset($_GET['id_reparto']) and isset($_GET['Anno'])){
 
@@ -163,7 +161,7 @@ $Anno=$_GET['Anno'];
 
 
 
-    $query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds  $filtra_Amm2");
+    $query=$pdo->query("SELECT SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds $filtra_Amm2");
 
     while($cicle=$query->fetch())  { 
 

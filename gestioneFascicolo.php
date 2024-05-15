@@ -7,7 +7,7 @@
     <title>Gestione Fascicolo</title>
     <link rel="stylesheet" href="./CSS/gestioneFascicolo.css">
     <link rel="shortcut icon" href="./IMG/9719OIP.ico" type="image/x-icon">
-    <script src="./CSS/js/jquery.min.js"  ></script>
+    <script src="/CSS/js/jquery.min.js" defer ></script>
 </head>
 <body>
     <?php
@@ -54,6 +54,7 @@ if($_SESSION['codente'] !=1){
 <div class="det-pds">
     <table>
         <thead>
+        <th>n° Fascicolo</th>
             <th>n° PDS</th>
             <th>dataPDS</th>
             <th>Reparto</th>
@@ -67,7 +68,7 @@ if($_SESSION['codente'] !=1){
         </thead>
 <tbody>
 <?php
- $sql="SELECT num_PDS, date_format(Data_protocollo,'%d/%m/%y') as Data_protocollo,Reparto, capitolo, art, prog, Oggetto, Decreto, Valore_progetto from Registro_PDS ";
+ $sql="SELECT fascicolo, num_PDS, date_format(Data_protocollo,'%d/%m/%y') as Data_protocollo,Reparto, capitolo, art, prog, Oggetto, Decreto, Valore_progetto from registro_pds ";
  $stmt=$pdo->query($sql);
  while($cicle=$stmt->fetch()){
    echo"
@@ -142,7 +143,7 @@ if($_SESSION['codente'] !=1){
 
     $('#num_fascicolo').keyup(function(e){
 
-
+ console.log(e);
       let n_fascicolo=$('#num_fascicolo').val();
 
        $.ajax({
@@ -152,7 +153,7 @@ if($_SESSION['codente'] !=1){
         success:function(result)
     {
       $('#filtraFascicolo').html(result);
-    
+   
     }
     
   });
