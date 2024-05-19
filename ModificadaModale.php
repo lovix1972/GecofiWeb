@@ -28,7 +28,7 @@ $impegnato=                     $_POST['impegnato'];
 $contabilizzato=                $_POST['contabilizzato'];
 
 
-$sql="UPDATE Registro_PDS SET Data_protocollo='$data_protocollo', Oggetto='$oggetto',Reparto='$reparto', ID_Reparto=$id_reparto,id_capitolo=$id_capitolo, Capitolo=$capitolo, Art=$art, IDV=$idv, Decreto='$decreto', Valore_progetto='$valore_progetto',Previsto_impegno='$previsto_impegno',Impegnato='$impegnato',Contabilizzato='$contabilizzato' where ID_PDS=$id_pds";
+$sql="UPDATE registro_pds SET Data_protocollo='$data_protocollo', Oggetto='$oggetto',Reparto='$reparto', ID_Reparto=$id_reparto,id_capitolo=$id_capitolo, Capitolo=$capitolo, Art=$art, IDV=$idv, Decreto='$decreto', Valore_progetto='$valore_progetto',Previsto_impegno='$previsto_impegno',Impegnato='$impegnato',Contabilizzato='$contabilizzato' where ID_PDS=$id_pds";
 
 $update=$pdo->prepare($sql);
 

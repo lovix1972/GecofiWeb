@@ -51,7 +51,7 @@ include_once("Connect.php");
    
     $ID_PDS = $_POST['ID_PDS'];
                    
-               $query=$pdo->query("SELECT *, date_format(Data_protocollo,'%d/%m/%Y') as Data_protocollo FROM Registro_PDS where ID_PDS='$ID_PDS'");
+               $query=$pdo->query("SELECT *, date_format(Data_protocollo,'%d/%m/%Y') as Data_protocollo FROM registro_pds where ID_PDS='$ID_PDS'");
                /*$query->fetchall();*/
               
 

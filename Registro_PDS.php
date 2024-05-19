@@ -57,7 +57,7 @@ Ricerca per: <select id="filtro" name ="Filtro" class="form-select" required>
             <option value="num_PDS">n_PDS</option>
 </select>
 Reparto: 
-<select name ="id_eparto" class="form-select" id="id_reparto" required>
+<select name ="id_reparto" class="form-select" id="id_reparto" required>
 <option></option>
             <?php
             include_once('Connect.php');
@@ -151,7 +151,7 @@ Reparto:
 
                       
 // Recupero per totali tabella//
-$query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM Registro_pds WHERE $Filtro like '%".$cerca."%' and ID_Reparto='$ID_Reparto' and anno=2024");
+$query=$pdo->query("SELECT SUM(Valore_progetto) as Valore_progetto, SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds WHERE $Filtro like '%".$cerca."%' and ID_Reparto='$ID_Reparto' and anno=2024");
 while($cicle=$query->fetch()){ 
     echo"
 <tr class='tot-evidenza'>
