@@ -50,7 +50,7 @@ $art=$_POST['art'];
 
 
 
-$sql="SELECT * from registro_pds where Capitolo=$capitolo and Art=$art and Reparto= $reparto  order by num_PDS ";
+$sql="SELECT * from registro_pds where capitolo=$capitolo and art=$art and Reparto= $reparto  order by num_PDS ";
 
 $stmt=$pdo->query($sql);
 
@@ -77,7 +77,7 @@ $stmt=$pdo->query($sql);
  }
 
 
- $query1=$pdo->query("SELECT SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS contabilizzato FROM Registro_pds  where Registrato=1 and Anno=2024 and capitolo<>4191 and capitolo<>4195 and Capitolo=$capitolo and art=$art and Reparto='$reparto'");       
+ $query1=$pdo->query("SELECT SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS contabilizzato FROM registro_pds  where Registrato=1 and Anno=2024 and capitolo<>4191 and capitolo<>4195 and Capitolo=$capitolo and art=$art and Reparto='$reparto'");       
       
 
 

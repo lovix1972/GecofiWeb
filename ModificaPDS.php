@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modifica Progetto di spesa</title>
     <link rel="shortcut icon" href="9719OIP.ico" type="image/x-icon">
-    <script src="./CSS/js/fontawesome.js" crossorigin="anonymous"></script>
-    <script src="./CSS/js/jquery.min.js"></script>
-<script src="./CSS/JS/modal.js" defer></script>
+    <script src="/CSS/js/fontawesome.js" crossorigin="anonymous"></script>
+    <script src="/CSS/js/jquery.min.js"></script>
+<script src="/CSS/JS/modal.js" defer></script>
 </head>
 
 <link rel="stylesheet" type="Text/css" href="./CSS/Style.css"> 
@@ -21,7 +21,8 @@
 
 session_start();
    
- 
+
+
 if(!isset($_SESSION['utente']) ){
 
   header('location:session.php');
@@ -77,7 +78,7 @@ include_once("Connect.php");
      
             
               }     
-        
+          
 ?>
 
 <div class="form1" name="form1">
