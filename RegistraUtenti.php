@@ -15,15 +15,15 @@
 
 <?php
 
-require_once('Connect.php');
+require_once('./src/Connect.php');
 
 if (!isset($_POST['codente']) || empty($_POST['codente']) || empty($_POST['utente'])){
 
 
 $msg ="Inserire i dati richiesti!";
 
-printf($msg, '<a href="./index.php" >Torna al Login</a>');
-    printf('<a href="./Registrazione.php" target="_top">Registrati</a>');
+printf($msg, '<a href="./index.html" >Torna al Login</a>');
+    printf('<a href="./src/Registrazione.php" target="_top">Registrati</a>');
 
 }else{
 
@@ -95,7 +95,7 @@ if($num_row !=0){
                         $headers[] = 'Content-type: text/html; charset=utf-8';
                        // mail($email, 'Conferma di Registrazione sulla piattaforma di gestione Contabile della Direzione di Intendenza', $message, implode("\r\n", $headers));
 
-                        header("Location:index.php");
+                        header("Location:index.html");
                         }
 
             }

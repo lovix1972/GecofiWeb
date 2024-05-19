@@ -1,11 +1,11 @@
 <?php
 
 
-/*require ("./vendor/autoload.php");*/
+
 
 $type="mysql";
 $servername = "localhost";
-$usernamedb = "lovix";
+$usernamedb = "root";
 $passworddb = "Misery12";
 $dbname = "gecofi";
 $charset="utf8mb4";

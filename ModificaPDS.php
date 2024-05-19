@@ -44,7 +44,7 @@ if(!isset($_SESSION['utente']) ){
     }
 
 
-include_once("connect.php");
+include_once("Connect.php");
 
 
   if(isset($_POST['ID_PDS']) ){

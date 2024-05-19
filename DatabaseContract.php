@@ -1,5 +1,5 @@
 <?php
-namespace Pasquale\Gecofi_Office;
+namespace Pasquale\GecofiWeb;
 interface DatabaseContract{
     const TYPE_PDO="pdo";
     const TYPE_MySQLi="mysqli";

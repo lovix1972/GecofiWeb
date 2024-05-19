@@ -51,7 +51,7 @@ $filtra_Amm2="WHERE id_Reparto = '".$ID_Reparto."' ";
 <link rel="stylesheet" href="./CSS/preavvisi.css"> 
 
 <script src="./CSS/js/jquery.min.js"  ></script>
-<script src="./CSS/js/hamburger.js" defer   ></script>
+<script src="./CSS/js/hamburger.js" defer ></script>
 </head>
 
    <body>
@@ -229,8 +229,7 @@ $Anno=$_GET['Anno'];
                 
                 $('.cont-modale').html(response);
               
-          console.log(reparto)
-        
+          
                 }
              
               });

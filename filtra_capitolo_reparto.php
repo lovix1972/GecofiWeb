@@ -36,9 +36,9 @@ include ("Connect.php");
 
 
 
-if (isset($_POST['capitolo']) && isset($_POST['art']) && isset($_POST['reparto'])) {
+if (isset($_POST['capitolo']) && isset($_POST['art']) && isset($_POST['Reparto'])) {
 
-$reparto=$_POST['reparto'];
+$reparto=$_POST['Reparto'];
 $capitolo=$_POST['capitolo'];
 $art=$_POST['art'];
 
@@ -50,7 +50,7 @@ $art=$_POST['art'];
 
 
 
-$sql="SELECT * from Registro_PDS where  Capitolo=$capitolo and Art=$art and Reparto= '$reparto'  order by num_PDS ASC ";
+$sql="SELECT * from registro_pds where Capitolo=$capitolo and Art=$art and Reparto= $reparto  order by num_PDS ";
 
 $stmt=$pdo->query($sql);
 

@@ -11,13 +11,13 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Registrazione Utente</title>
     
-<link rel="stylesheet" href="./CSS/Style-Rec.css">
-    <link rel="shortcut icon" href="./IMG/9719OIP.ico" type="image/x-icon">
+<link rel="stylesheet" href="/CSS/Style-Rec.css">
+    <link rel="shortcut icon" href="/IMG/9719OIP.ico" type="image/x-icon">
 </head>
 <body>
 
 <header>
-     <img src="./IMG/OIP.png" alt="Stemma Brigata">
+     <img src="/IMG/OIP.png" alt="Stemma Brigata">
 
     <span>Registrazione Utente</span>
          
@@ -74,7 +74,7 @@ session_start();
                      <option disabled selected >Ente di appartenenza</option>
                       <?php
                  
-                      require_once ('Connect.php');
+                     
 
                      
                       $sql="SELECT id_reparto, reparto from reparti";
@@ -93,7 +93,7 @@ session_start();
                              
                 <div class="button">
                 <button class="btn btn-primary" type="submit" >Registra</button>
-                <button><a href="./index.html">Login</a></button>
+                <button><a href="index.html">Login</a></button>
                   </div>              
         
          

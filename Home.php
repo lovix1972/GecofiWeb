@@ -3,7 +3,7 @@ session_start();
 
 if(!isset($_SESSION['utente']) && !isset($_SESSION['codente'])){
 
-  header('location:session.php');
+  header('location: session.php');
 }
 
 if($_SESSION['codente'] !=1){
@@ -26,11 +26,11 @@ include("./header/headerAmm.html");
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gestione contabile finanziaria</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <link rel="stylesheet" href="./css/StyleHeader.css">
-  <link rel="shortcut icon" href="9719OIP.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/CSS/StyleHeader.css">
+  <link rel="shortcut icon" href="/src/9719OIP.ico" type="image/x-icon">
   
-  <link rel="stylesheet" href="./css/style.css">
-  <script src="./CSS/js/jquery.min.js"></script>
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/CSS/js/jquery.min.js"></script>
 </head>
  
 

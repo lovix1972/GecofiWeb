@@ -1,5 +1,5 @@
 <?php
-namespace Pasquale\Gecofi_Office;
+namespace Pasquale\GecofiWeb;
 
 class DBConfig{
 

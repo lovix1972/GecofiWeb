@@ -5,9 +5,9 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Login</title>
-   <link rel="stylesheet" href="./css/Style_login.css">
-   <link rel="shortcut icon" href="9719OIP.ico" type="image/x-icon">
-   <script src="./CSS/js/jquery.min.js"></script>
+   <link rel="stylesheet" href="/CSS/Style_login.css">
+   <link rel="shortcut icon" href="/src/9719OIP.ico" type="image/x-icon">
+   <script src="/CSS/js/jquery.min.js"></script>
 </head>
 <body>
 <div class="box-msg-login">
@@ -19,7 +19,7 @@ include ("Connect.php");
   /*require ('./vendor/autoload.php');  */
   
  if (empty($_POST['utente']) || empty($_POST['password']) ||  empty($_POST['codente'])  ){
-  echo "Inserire le credenziali complete", '<a href="./index.php" target="_top" class="msg-login"> Login</a>';
+  echo "Inserire le credenziali complete", '<a href="index.html" target="_top" class="msg-login"> Login</a>';
 
  }
   
@@ -49,7 +49,7 @@ include ("Connect.php");
                                                                    
                         if (!$user || password_verify($password, $user['password']) === false) {
 
-                              echo "Credenziali non valide!", '<a href="./index.php" target="_top" class="msg-login"> Login</a>';     
+                              echo "Credenziali non valide!", '<a href="index.html" target="_top" class="msg-login"> Login</a>';     
 
                               unset($_SESSION['utente']);
                               unset($_SESSION['codente']);
@@ -59,7 +59,7 @@ include ("Connect.php");
                         } else {
                                                     
  
-                       header('Location: Home.php'); 
+                       header('Location: ./Home.php'); 
                   
                        ?>
                        <script>
