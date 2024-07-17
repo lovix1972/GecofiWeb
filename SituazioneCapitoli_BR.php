@@ -151,7 +151,7 @@ $Anno=$_GET['Anno'];
 
           <td>".$cicle["previsto_impegno"]."</td>
           <td>".$cicle["Impegnato"]."</td>  
-          <td>".$cicle["Contabilizzato"]."</tde=>
+          <td>".$cicle["Contabilizzato"]."</td>
           
      
           </tr>";
@@ -161,7 +161,9 @@ $Anno=$_GET['Anno'];
 
 
 
-    $query=$pdo->query("SELECT SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds $filtra_Amm2");
+
+ 
+    $query=$pdo->query("SELECT SUM(previsto_impegno) as previsto_impegno, SUM(Impegnato) as Impegnato, SUM(Contabilizzato) AS Contabilizzato FROM registro_pds $filtra_Amm2") or die (mysqli_error());
 
     while($cicle=$query->fetch())  { 
 
@@ -172,10 +174,9 @@ $Anno=$_GET['Anno'];
           <td style='font-size:15px; font-weight:bold;'>".number_format($cicle["previsto_impegno"],2,',','.')."</td>
           <td style='font-size:15px; font-weight:bold;'>".number_format($cicle["Impegnato"],2,',','.')."</td>  
           <td style='font-size:15px; font-weight:bold;'>".number_format($cicle["Contabilizzato"],2,',','.')."</td></tr>";
-      }       
+      }    
+     
 
- 
- 
     ?>
 
     </table>

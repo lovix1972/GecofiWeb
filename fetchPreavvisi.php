@@ -3,7 +3,7 @@
 include('Connect.php');
 
 
-$sql=$pdo ->query("SELECT *, sum(Preavvisi) as totPreavvisi from Capitoli GROUP BY capitolo, art ");
+$sql=$pdo ->query("SELECT * from Capitoli  ");
 
 
 $risultato=Array();
@@ -13,10 +13,9 @@ while($row=$sql->fetch()){
     $risultato[] =  $row;
 }
  
-   
 $data = array($risultato);
  
 header('Content-Type: application/json; charset=utf-8');
-echo json_encode($risultato);
+ json_encode($risultato);
 
  ?>

@@ -37,8 +37,8 @@ $data = array($risultato);
 
 
 
-//header('Content-Type: application/json; charset=utf-8');
-  //json_encode($risultato);
+header('Content-Type: application/json; charset=utf-8');
+  json_encode($risultato);
 ?>
 <table>
 
